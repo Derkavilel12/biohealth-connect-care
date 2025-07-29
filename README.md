@@ -1,73 +1,39 @@
-# Welcome to your Lovable project
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Derkavilel12/biohealth-connect-care/main/public/logo.png" alt="BioHealth Tracker Logo" width="200"/>
+</p>
 
-## Project info
+# 🩺 BioHealth Tracker
 
-**URL**: https://lovable.dev/projects/50efb723-4f44-4502-ae55-a6a872483cf4
+**BioHealth Tracker** es una aplicación inteligente para el seguimiento personalizado de la salud.  
+Permite a pacientes y profesionales médicos gestionar análisis, registrar síntomas, recibir alertas predictivas y prevenir enfermedades mediante IA.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧠 Funcionalidades Principales
 
-**Use Lovable**
+- 📄 Subida e interpretación de análisis médicos (sangre, orina, radiografías, etc.)
+- 🤖 Inteligencia Artificial para predicción y prevención de enfermedades
+- 📅 Gestión de citas médicas
+- 📈 Historial clínico detallado
+- 🧘‍♂️ Rutinas personalizadas de salud preventiva
+- ⌚ Integración con smartwatches y sensores biométricos
+- 👵 Interfaz amigable para adultos mayores
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/50efb723-4f44-4502-ae55-a6a872483cf4) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Tecnologías Usadas
 
-**Use your preferred IDE**
+- **Vite + React + TypeScript**
+- **TailwindCSS** + **ShadCN UI**
+- **IA / ML (en desarrollo)**
+- **Lovable.dev** (Prototipado visual)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ⚙️ Instalación Rápida
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/Derkavilel12/biohealth-connect-care.git
+cd biohealth-connect-care
+npm install
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/50efb723-4f44-4502-ae55-a6a872483cf4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
