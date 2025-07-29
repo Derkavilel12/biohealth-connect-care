@@ -30,10 +30,3 @@ Permite a pacientes y profesionales médicos gestionar análisis, registrar sín
 
 ---
 
-## ⚙️ Instalación Rápida
-
-```bash
-git clone https://github.com/Derkavilel12/biohealth-connect-care.git
-cd biohealth-connect-care
-npm install
-npm run dev
