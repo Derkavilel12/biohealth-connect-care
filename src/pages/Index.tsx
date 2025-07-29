@@ -1,18 +1,48 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import WelcomeScreen from "@/components/WelcomeScreen";
+import LoginScreen from "@/components/LoginScreen";
+import RegisterScreen from "@/components/RegisterScreen";
+import ForgotPasswordScreen from "@/components/ForgotPasswordScreen";
 import PatientDashboard from "@/components/PatientDashboard";
 import DoctorDashboard from "@/components/DoctorDashboard";
 import MedicalHistory from "@/components/MedicalHistory";
 import AppointmentScheduler from "@/components/AppointmentScheduler";
 
 const Index = () => {
-  const [currentScreen, setCurrentScreen] = useState<"welcome" | "patient" | "doctor" | "history" | "appointments">("welcome");
+  const [currentScreen, setCurrentScreen] = useState<"welcome" | "login" | "register" | "forgot-password" | "patient" | "doctor" | "history" | "appointments">("welcome");
 
   const renderScreen = () => {
     switch (currentScreen) {
       case "welcome":
-        return <WelcomeScreen />;
+        return (
+          <WelcomeScreen 
+            onLogin={() => setCurrentScreen("login")}
+            onRegister={() => setCurrentScreen("register")}
+            onForgotPassword={() => setCurrentScreen("forgot-password")}
+          />
+        );
+      case "login":
+        return (
+          <LoginScreen 
+            onBack={() => setCurrentScreen("welcome")}
+            onLogin={() => setCurrentScreen("patient")}
+            onForgotPassword={() => setCurrentScreen("forgot-password")}
+          />
+        );
+      case "register":
+        return (
+          <RegisterScreen 
+            onBack={() => setCurrentScreen("welcome")}
+            onRegister={() => setCurrentScreen("patient")}
+          />
+        );
+      case "forgot-password":
+        return (
+          <ForgotPasswordScreen 
+            onBack={() => setCurrentScreen("welcome")}
+          />
+        );
       case "patient":
         return <PatientDashboard />;
       case "doctor":
@@ -22,7 +52,13 @@ const Index = () => {
       case "appointments":
         return <AppointmentScheduler />;
       default:
-        return <WelcomeScreen />;
+        return (
+          <WelcomeScreen 
+            onLogin={() => setCurrentScreen("login")}
+            onRegister={() => setCurrentScreen("register")}
+            onForgotPassword={() => setCurrentScreen("forgot-password")}
+          />
+        );
     }
   };
 

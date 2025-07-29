@@ -3,7 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Heart, Shield, Users, Activity } from "lucide-react";
 
-const WelcomeScreen = () => {
+interface WelcomeScreenProps {
+  onLogin: () => void;
+  onRegister: () => void;
+  onForgotPassword: () => void;
+}
+
+const WelcomeScreen = ({ onLogin, onRegister, onForgotPassword }: WelcomeScreenProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -43,8 +49,8 @@ const WelcomeScreen = () => {
 
   return (
     <div className="mobile-container">
-      {/* Header */}
-      <div className="text-center pt-12 pb-8 px-6">
+      {/* Header with improved logo positioning */}
+      <div className="text-center pt-16 pb-8 px-6">
         <div className="w-20 h-20 mx-auto mb-6 bg-gradient-primary rounded-3xl flex items-center justify-center shadow-medium">
           <img 
             src="/lovable-uploads/0d05483f-26dd-4bc4-ac55-9344b8cf6b86.png" 
@@ -94,6 +100,7 @@ const WelcomeScreen = () => {
       {/* Action Buttons */}
       <div className="px-6 space-y-4">
         <Button 
+          onClick={onLogin}
           className="btn-medical w-full bg-gradient-primary hover:shadow-medium text-white"
           size="lg"
         >
@@ -101,6 +108,7 @@ const WelcomeScreen = () => {
         </Button>
         
         <Button 
+          onClick={onRegister}
           variant="outline" 
           className="btn-medical w-full border-2 border-primary text-primary hover:bg-primary hover:text-white"
           size="lg"
@@ -108,7 +116,10 @@ const WelcomeScreen = () => {
           Registrarse
         </Button>
 
-        <button className="w-full text-center text-muted-foreground underline py-4">
+        <button 
+          onClick={onForgotPassword}
+          className="w-full text-center text-muted-foreground underline py-4 hover:text-primary transition-colors"
+        >
           ¿Olvidaste tu contraseña?
         </button>
       </div>
