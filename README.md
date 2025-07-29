@@ -27,6 +27,3 @@ Permite a pacientes y profesionales médicos gestionar análisis, registrar sín
 - **TailwindCSS** + **ShadCN UI**
 - **IA / ML (en desarrollo)**
 - **Lovable.dev** (Prototipado visual)
-
----
-
