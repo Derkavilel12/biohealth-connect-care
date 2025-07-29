@@ -44,7 +44,7 @@ const Index = () => {
           />
         );
       case "patient":
-        return <PatientDashboard />;
+        return <PatientDashboard userName="María" />;
       case "doctor":
         return <DoctorDashboard />;
       case "history":

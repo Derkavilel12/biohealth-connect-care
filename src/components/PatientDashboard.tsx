@@ -16,7 +16,11 @@ import {
   ChevronRight
 } from "lucide-react";
 
-const PatientDashboard = () => {
+interface PatientDashboardProps {
+  userName?: string;
+}
+
+const PatientDashboard = ({ userName = "Usuario" }: PatientDashboardProps) => {
   const quickStats = [
     { label: "Próxima cita", value: "15 Ene", icon: Calendar, color: "text-medical-blue" },
     { label: "Alertas", value: "2", icon: AlertTriangle, color: "text-medical-orange" },
@@ -83,7 +87,7 @@ const PatientDashboard = () => {
               />
             </div>
             <div>
-              <h1 className="text-xl font-bold">Hola, María</h1>
+              <h1 className="text-xl font-bold">Hola, {userName}</h1>
               <p className="text-white/80 text-sm">¿Cómo te sientes hoy?</p>
             </div>
           </div>
